@@ -13,6 +13,7 @@ func f1() int {
 func f1err() (int, error) {
 	return 0, nil
 }
+
 func f2() (int, int) {
 	return 0, 0
 }
