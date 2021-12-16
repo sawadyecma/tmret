@@ -6,6 +6,10 @@ func f0err() error {
 	return nil
 }
 
+func f0err2() (error, error) {
+	return nil, nil
+}
+
 func f1() int {
 	return 0
 }

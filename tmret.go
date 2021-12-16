@@ -35,6 +35,7 @@ func Exec() {
 			}
 
 			retsExcludeErr := len(rets.List)
+			retsErr := 0
 			for i := range rets.List {
 				ident, ok := rets.List[i].Type.(*ast.Ident)
 				if !ok {
@@ -43,10 +44,10 @@ func Exec() {
 
 				if ident.Name == "error" {
 					retsExcludeErr -= 1
+					retsErr += 1
 				}
-
 			}
-			if retsExcludeErr >= 2 {
+			if retsExcludeErr >= 2 || retsErr > 1 {
 				fmt.Println(fset.Position(a.Pos()))
 				return false
 			}
