@@ -14,7 +14,10 @@ func f1() int {
 	return 0
 }
 
-func f1err() (int, error) {
+func f1err() (
+	int,
+	error,
+) {
 	return 0, nil
 }
 
@@ -22,7 +25,9 @@ func f2() (int, int) {
 	return 0, 0
 }
 
-func f2err() (int, int, error) {
+func f2err() (
+	int, int, error,
+) {
 	return 0, 0, nil
 }
 
