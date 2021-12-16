@@ -1,5 +1,5 @@
 package tmret
 
-func exec() {
+func Exec() {
 
 }
